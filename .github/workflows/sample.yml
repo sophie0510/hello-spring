@@ -24,11 +24,8 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: print files
-        run: |
-          ls
-      # - name: Upload artifacts
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: my-artifacts
-      #     path: 
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifacts
+          path: ./target
